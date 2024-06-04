@@ -1,0 +1,27 @@
+<nav>
+  <div>
+    <button
+      class="nav__button"
+      [routerLink]="''"
+      [ngClass]="{
+        'nav__button_pressed': listDisplay,
+        'nav__button': !listDisplay
+      }"
+      (click)="listDisplay = true"
+    >
+      Список
+    </button>
+    <button
+      class="nav__button"
+      [routerLink]="'/tile'"
+      [ngClass]="{
+        'nav__button_pressed': !listDisplay,
+        'nav__button': listDisplay
+      }"
+      (click)="listDisplay = false"
+    >
+      Плитка
+    </button>
+  </div>
+    <button [routerLink]="'/create'">Создать</button>
+</nav>

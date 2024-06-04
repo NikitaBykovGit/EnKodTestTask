@@ -1,0 +1,6 @@
+<header><h1>{{name}}</h1></header>
+<main>
+  <div class="news__container">
+    <router-outlet (activate)="getTitle($event)"></router-outlet>
+  </div>
+</main>

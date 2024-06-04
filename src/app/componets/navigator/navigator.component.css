@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 1vh;
+}
+
+.nav__button {
+  height: 36px;
+  width: 62px;
+  background: #FFFFFF;
+  border: 1px solid #C4C7D1
+}
+
+.nav__button_pressed {
+  height: 36px;
+  width: 62px;
+  background: #F2F5FA;
+  border: 1px solid #C4C7D1
+}
