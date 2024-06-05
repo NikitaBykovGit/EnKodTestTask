@@ -1,0 +1,27 @@
+hr {
+  border: 1px solid #D3D4DB;
+}
+
+.article__container {
+  display: flex;
+  align-items: center;
+  height: 140px;
+}
+
+.article__img {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.artcile__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 28px;
+  height: 60px;
+}
+
+.article__title {
+  display: flex;
+}

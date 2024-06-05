@@ -1,6 +1,12 @@
-import {ICity} from '../models/city'
+import { Injectable } from '@angular/core'
+import { ICity } from "../models/city"
 
+@Injectable({
+  providedIn: 'root'
+})
 export class CityService {
+
+  constructor() { }
 
   private data: ICity[] = [
     {
@@ -58,8 +64,14 @@ export class CityService {
     return this.data;
   }
 
-  addCity(city: ICity) {
-    this.data.push(city);
+  addCity(name:string, description:string, url:string) {
+    let newCity: ICity = {
+      id: this.data.at(-1)!.id + 1,
+      image: url,
+      name: name,
+      description: description,
+      favorite: false
+    }
+    this.data.push(newCity);
   }
-
 }

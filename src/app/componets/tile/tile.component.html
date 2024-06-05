@@ -1,2 +1,13 @@
 <app-navigator></app-navigator>
-<p>tile works!</p>
+<div class="main__grid-wrapper">
+  <article *ngFor="let city of citys">
+    <img class="article__img" src = "{{city.image}}" alt = "{{city.name}}">
+    <div class="artcile__text">
+      <div class="article__title">
+        <h3>{{city.name}}</h3>
+        {{city.favorite}}
+      </div>
+      <p>{{city.description}}</p>
+    </div>
+  </article>
+</div>

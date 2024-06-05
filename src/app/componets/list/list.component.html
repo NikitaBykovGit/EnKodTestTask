@@ -1,8 +1,14 @@
 <app-navigator></app-navigator>
-
-<div *ngFor="let city of citys">
+<article *ngFor="let city of citys">
   <hr>
-  <div><h3>{{city.name}}</h3>{{city.favorite}}</div>
-  <img src = "{{city.image}}" alt = "{{city.name}}">
-  <p>{{city.description}}</p>
-</div>
+  <div class="article__container">
+    <img class="article__img" src = "{{city.image}}" alt = "{{city.name}}">
+    <div class="artcile__text">
+      <div class="article__title">
+        <h3>{{city.name}}</h3>
+        {{city.favorite}}
+      </div>
+      <p>{{city.description}}</p>
+    </div>
+  </div>
+</article>

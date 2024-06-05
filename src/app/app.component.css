@@ -1,14 +1,14 @@
 header {
   background-color: #F2F5FA;
-  height: 10vh;
+  height: 117px;
   display: flex;
   align-items: center;
 }
 
 h1 {
-  margin: 0 5vh;
+  margin: 0 60px;
 }
 
 .news__container {
-  margin: 3vh 5vh;
+  margin: 36px 60px;
 }

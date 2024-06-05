@@ -1,0 +1,27 @@
+.main__grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 320px);
+  grid-template-rows: auto;
+  grid-gap: 1vw;
+}
+
+article {
+  border-radius: 10px;
+  background: #F2F5FA;
+  height: 320px;
+}
+
+.article__img {
+  height: 188px;
+  width: 320px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.artcile__text {
+  margin: 12px 20px;
+}
+
+.article__title {
+  display: flex;
+  margin: 0px 0px 8px;
+}

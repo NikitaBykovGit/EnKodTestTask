@@ -8,12 +8,26 @@ nav {
   height: 36px;
   width: 62px;
   background: #FFFFFF;
-  border: 1px solid #C4C7D1
+  border: 1px solid #C4C7D1;
+  font-size: 14px;
+  border-radius: 2px;
 }
 
 .nav__button_pressed {
   height: 36px;
   width: 62px;
   background: #F2F5FA;
-  border: 1px solid #C4C7D1
+  border: 1px solid #C4C7D1;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+.nav__createbutton {
+  height: 36px;
+  width: 96px;
+  background: #21A5B9;
+  border: 1px solid #21A5B9;
+  color: #FFFFFF;
+  font-size: 14px;
+  border-radius: 4px;
 }
