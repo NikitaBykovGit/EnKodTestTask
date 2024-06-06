@@ -1,20 +1,24 @@
 <nav>
   <div>
     <button
-      [ngClass]="getListDisplay() ? 'nav__button_pressed' : 'nav__button'"
+      [ngClass]="getListDisplay()
+        ? 'nav__left-button_pressed'
+        : 'nav__left-button'"
       [routerLink]="''"
       (click)="setListDisplay()">
       Список
     </button>
     <button
-      [ngClass]="!getListDisplay() ? 'nav__button_pressed' : 'nav__button'"
+      [ngClass]="!getListDisplay()
+        ? 'nav__right-button_pressed'
+        : 'nav__right-button'"
       [routerLink]="'/tile'"
       (click)="setTileDisplay()">
       Плитка
     </button>
   </div>
     <button
-      class = "nav__createbutton"
+      class = "nav__create-button"
       [routerLink]="'/create'">
       Создать
     </button>

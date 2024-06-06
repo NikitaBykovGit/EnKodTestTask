@@ -74,4 +74,13 @@ export class CityService {
     }
     this.data.push(newCity);
   }
+
+  changeFavorite(id:number, val:boolean) {
+    let newCitys: ICity[] = this.data.map((city) => (
+      city.id === id
+        ? { ...city, favorite: val }
+        : city
+      ));
+      this.data = newCitys;
+    }
 }

@@ -24,4 +24,11 @@ article {
 .article__title {
   display: flex;
   margin: 0px 0px 8px;
+  align-items: center;
+}
+
+.article__title button {
+  margin: 0px 20px;
+  border: 0;
+  background: #F2F5FA;
 }

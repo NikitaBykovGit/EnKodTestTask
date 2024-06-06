@@ -4,25 +4,43 @@ nav {
   padding: 0 0 1vh;
 }
 
-.nav__button {
+.nav__left-button {
   height: 36px;
   width: 62px;
   background: #FFFFFF;
   border: 1px solid #C4C7D1;
   font-size: 14px;
-  border-radius: 2px;
+  border-radius: 2px 0px 0px 2px;
 }
 
-.nav__button_pressed {
+.nav__left-button_pressed {
   height: 36px;
   width: 62px;
   background: #F2F5FA;
   border: 1px solid #C4C7D1;
   font-size: 14px;
-  border-radius: 2px;
+  border-radius: 2px 0px 0px 2px;
 }
 
-.nav__createbutton {
+.nav__right-button {
+  height: 36px;
+  width: 62px;
+  background: #FFFFFF;
+  border: 1px solid #C4C7D1;
+  font-size: 14px;
+  border-radius: 0px 2px 2px 0px;
+}
+
+.nav__right-button_pressed {
+  height: 36px;
+  width: 62px;
+  background: #F2F5FA;
+  border: 1px solid #C4C7D1;
+  font-size: 14px;
+  border-radius: 0px 2px 2px 0px;
+}
+
+.nav__create-button {
   height: 36px;
   width: 96px;
   background: #21A5B9;

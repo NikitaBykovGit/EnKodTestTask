@@ -10,14 +10,11 @@ body {
   font-family: 'Roboto', sans-serif;
   background: #fff;
   color: #434652;
+  font-size: 14px;
 }
 
 button {
   cursor: pointer;
-}
-
-p {
-  font-size: 14px;
 }
 
 h3 {

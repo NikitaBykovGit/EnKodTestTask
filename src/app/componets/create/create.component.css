@@ -22,10 +22,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 0 15px;
 }
 
-.create-form__createbutton {
+.create-form__create-button {
   width: 88px;
   height: 36px;
   border-radius: 2px;
@@ -44,7 +44,7 @@
   border: 1px solid #C4C7D1;
 }
 
-.create-form__biginput {
+.create-form__big-input {
   width: 534px;
   height: 80px;
   padding: 0px 12px 50px 12px;
@@ -60,9 +60,14 @@
   height: 60px;
 }
 
-.create-form__bigcontainer {
+.create-form__big-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 104px;
+}
+
+.create-form__icon {
+  height: 18px;
+  width: 18px;
 }

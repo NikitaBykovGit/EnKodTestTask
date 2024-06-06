@@ -6,7 +6,16 @@
     <div class="artcile__text">
       <div class="article__title">
         <h3>{{city.name}}</h3>
-        {{city.favorite}}
+        <div *ngIf="city.favorite; else notSelected">
+          <button (click)="delFromFavorite(city.id)">
+            <mat-icon class="article__icon" svgIcon="Selected"></mat-icon>
+          </button>
+        </div>
+        <ng-template #notSelected>
+          <button (click)="addToFavorite(city.id)">
+            <mat-icon class="article__icon" svgIcon="NotSelected"></mat-icon>
+          </button>
+        </ng-template>
       </div>
       <p>{{city.description}}</p>
     </div>

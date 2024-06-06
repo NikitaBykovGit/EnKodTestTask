@@ -1,8 +1,8 @@
 <div class="create-form">
   <button
     class="create-form__button"
-    [routerLink]="''">
-    <mat-icon svgIcon="Back"></mat-icon>
+    [routerLink]="getListDisplay() ? '' : '/tile'">
+    <mat-icon class="create-form__icon" svgIcon="Back"></mat-icon>
     Назад
   </button>
   <form
@@ -13,21 +13,21 @@
       <input
         id="city-name"
         class="create-form__input"
-        type="text"
+        type="text"Описание города
         required
         #name>
     </div>
-    <div class="create-form__bigcontainer">
+    <div class="create-form__big-container">
       <label for="city-discription">Описание города</label>
       <input
         id="city-discription"
-        class="create-form__biginput"
+        class="create-form__big-input"
         type="text"
         required
         #description>
     </div>
     <div class="create-form__container">
-      <label for="city-link">Описание города</label>
+      <label for="city-link">Ссылка на картинку</label>
       <input
         id="city-link"
         class="create-form__input"
@@ -36,7 +36,7 @@
         #url>
     </div>
     <button
-      class="create-form__createbutton"
+      class="create-form__create-button"
       type="submit">
       Создать
     </button>

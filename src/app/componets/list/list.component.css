@@ -24,4 +24,16 @@ hr {
 
 .article__title {
   display: flex;
+  align-items: center;
+}
+
+.article__title button {
+  margin: 0px 20px;
+  border: 0;
+  background: #fff;
+}
+
+.article__icon {
+  height: 22px;
+  width: 22px;
 }
