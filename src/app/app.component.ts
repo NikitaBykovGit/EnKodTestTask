@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, OnInit, ChangeDetectorRef, AfterContentChecked } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +8,25 @@ import { Component } from '@angular/core'
 
 export class AppComponent {
 
-  title:string = 'EnKodTestTask';
-  name:string = '';
+  title:string;
+  name:string;
+
+  constructor(private cdref: ChangeDetectorRef) {}
+
+  ngAfterContentChecked() {
+    this.cdref.detectChanges();
+  }
+
+  ngOnInit() {
+    this.title = 'EnKodTestTask';
+    this.name = '';
+  }
 
   getTitle(elementRef:any) {
     elementRef.titleEvent.subscribe((event: string) => {
         this.name = event;
     })
   }
+
+
 }
