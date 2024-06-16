@@ -1,21 +1,31 @@
 <app-navigator></app-navigator>
-<article *ngFor="let city of citys">
+<article *ngFor="let city of (citys$ | async)">
   <hr>
   <div class="article__container">
     <img class="article__img" src = "{{city.image}}" alt = "{{city.name}}">
     <div class="artcile__text">
-      <div class="article__title">
-        <h3>{{city.name}}</h3>
-        <div *ngIf="city.favorite; else notSelected">
-          <button (click)="delFromFavorite(city.id)">
-            <mat-icon class="article__icon" svgIcon="Selected"></mat-icon>
+      <div class="article__control">
+        <div class="article__title">
+          <h3>{{city.name}}</h3>
+          <div *ngIf="city.favorite; else notSelected">
+            <button (click)="delFromFavorite(city.id)">
+              <mat-icon class="article__icon" svgIcon="Selected"></mat-icon>
+            </button>
+          </div>
+          <ng-template #notSelected>
+            <button (click)="addToFavorite(city.id)">
+              <mat-icon class="article__icon" svgIcon="NotSelected"></mat-icon>
+            </button>
+          </ng-template>
+        </div>
+        <div>
+          <button>
+            <mat-icon class="article__icon" svgIcon="Delete"></mat-icon>
+          </button>
+          <button>
+            <mat-icon class="article__icon" svgIcon="Edit"></mat-icon>
           </button>
         </div>
-        <ng-template #notSelected>
-          <button (click)="addToFavorite(city.id)">
-            <mat-icon class="article__icon" svgIcon="NotSelected"></mat-icon>
-          </button>
-        </ng-template>
       </div>
       <p>{{city.description}}</p>
     </div>

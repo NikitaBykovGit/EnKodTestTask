@@ -20,6 +20,14 @@ hr {
   justify-content: space-between;
   padding: 0 28px;
   height: 60px;
+  width: 100%;
+}
+
+.article__control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .article__title {
@@ -27,7 +35,7 @@ hr {
   align-items: center;
 }
 
-.article__title button {
+.article__control button {
   margin: 0px 20px;
   border: 0;
   background: #fff;

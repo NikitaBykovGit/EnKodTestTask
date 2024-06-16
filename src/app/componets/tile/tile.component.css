@@ -21,14 +21,24 @@ article {
   margin: 12px 20px;
 }
 
-.article__title {
+.article__control {
   display: flex;
-  margin: 0px 0px 8px;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.article__title button {
-  margin: 0px 20px;
+.article__right {
+  display: flex;
+}
+
+.article__title {
+  display: flex;
+  width: 80%;
+}
+
+.article__control button {
+  margin: 0px 0px 0px 20px;
   border: 0;
   background: #F2F5FA;
 }

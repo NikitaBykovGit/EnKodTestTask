@@ -1,5 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef, AfterContentChecked } from '@angular/core';
 
+import { CityService } from './state/city.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,7 +13,10 @@ export class AppComponent {
   title:string;
   name:string;
 
-  constructor(private cdref: ChangeDetectorRef) {}
+  constructor(
+    private cdref: ChangeDetectorRef,
+    private cityService: CityService
+  ) {}
 
   ngAfterContentChecked() {
     this.cdref.detectChanges();
@@ -20,6 +25,7 @@ export class AppComponent {
   ngOnInit() {
     this.title = 'EnKodTestTask';
     this.name = '';
+    this.cityService.fetchCitys()
   }
 
   getTitle(elementRef:any) {

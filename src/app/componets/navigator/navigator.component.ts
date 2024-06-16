@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NaviService } from "../../services/navi.service"
+
+import { NaviService } from '../../state/navi.service';
 
 @Component({
   selector: 'app-navigator',
@@ -8,7 +9,9 @@ import { NaviService } from "../../services/navi.service"
 })
 export class NavigatorComponent {
 
-  constructor(private naviService: NaviService) {}
+  constructor(
+    private naviService: NaviService,
+  ) {}
 
   getListDisplay() {
     return this.naviService.getListDisplay();
@@ -19,6 +22,6 @@ export class NavigatorComponent {
   }
 
   setTileDisplay() {
-    this.naviService.setTileDisplay();
+    this.naviService.setTileDisplay()
   }
 }

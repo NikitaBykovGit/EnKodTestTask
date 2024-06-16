@@ -3,9 +3,9 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
-import { CityService } from "../../services/city.service"
+import { CityService } from "../../state/city.service"
 import { ICity } from "../../models/city"
-import { NaviService } from "../../services/navi.service"
+import { NaviService } from "../../state/navi.service"
 
 @Component({
   selector: 'app-create',

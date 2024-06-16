@@ -13,9 +13,23 @@ import { CreateComponent } from './componets/create/create.component';
 import { NavigatorComponent } from './componets/navigator/navigator.component';
 
 const appRoutes: Routes = [
-  {path: '', component:ListComponent},
-  {path: 'tile', component:TileComponent},
-  {path: 'create', component:CreateComponent}
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'list'
+  },
+  {
+    path: 'list',
+    component:ListComponent
+  },
+  {
+    path: 'tile',
+    component:TileComponent
+  },
+  {
+    path: 'create',
+    component:CreateComponent
+  }
 ]
 
 @NgModule({

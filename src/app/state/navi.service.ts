@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class NaviService {
   private listDisplay: boolean = true;
 
-  constructor() { }
+  constructor() {}
 
   getListDisplay(): boolean {
     return this.listDisplay;
