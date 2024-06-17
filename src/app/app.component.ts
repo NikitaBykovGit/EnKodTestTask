@@ -58,6 +58,4 @@ export class AppComponent {
         this.name = event;
     })
   }
-
-
 }

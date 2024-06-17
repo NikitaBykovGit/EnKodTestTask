@@ -1,5 +1,5 @@
 <app-navigator></app-navigator>
-<article *ngFor="let city of (citys$ | async)">
+<article *ngFor="let city of (cities$ | async)">
   <hr>
   <div class="article__container">
     <img class="article__img" src = "{{city.image}}" alt = "{{city.name}}">

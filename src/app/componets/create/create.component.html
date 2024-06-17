@@ -6,34 +6,47 @@
     Назад
   </button>
   <form
-    (submit)="createCity(name.value, description.value, url.value)"
+    [formGroup]="cityForm"
+    (submit)="createCity()"
     class="create-form__form">
     <div class="create-form__container">
       <label for="city-name">Название города</label>
       <input
         id="city-name"
+        formControlName="cityName"
         class="create-form__input"
-        type="text"Описание города
-        required
-        #name>
+        type="text">
+    </div>
+    <div
+      *ngIf="cityForm.controls['cityName'].invalid && !isSuccess"
+      class="create-form__error">
+      Введите название города!
     </div>
     <div class="create-form__big-container">
-      <label for="city-discription">Описание города</label>
+      <label for="city-description">Описание города</label>
       <input
-        id="city-discription"
+        id="city-description"
+        formControlName="cityDescription"
         class="create-form__big-input"
-        type="text"
-        required
-        #description>
+        type="text">
+    </div>
+    <div
+      *ngIf="cityForm.controls['cityDescription'].invalid && !isSuccess"
+      class="create-form__error">
+      Введите описание города!
     </div>
     <div class="create-form__container">
-      <label for="city-link">Ссылка на картинку</label>
+      <label for="image-link">Ссылка на картинку</label>
       <input
-        id="city-link"
+        id="image-link"
+        formControlName="imageLink"
         class="create-form__input"
-        type="text"
-        required
-        #url>
+        type="text">
+    </div>
+    <div
+      *ngIf="cityForm.controls['imageLink'].invalid && !isSuccess"
+      class="create-form__error">
+      Введите ссылку на картинку!
     </div>
     <button
       class="create-form__create-button"

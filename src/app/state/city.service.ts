@@ -1,8 +1,9 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core'
+import { Observable } from 'rxjs';
 
 import { ICity } from '../models/city'
-import { CityStore } from "./city.store";
+import { CityStore } from './city.store';
 
 @Injectable({
   providedIn: 'root'
@@ -40,6 +41,10 @@ export class CityService {
 
   editCity(id: number) {
     console.log(id)
+  }
+
+  fetchCity(id: number): Observable<ICity> {
+    return <Observable<ICity>> this.http.get(`/api/cities/${id}`);
   }
 
   fetchCitys() {

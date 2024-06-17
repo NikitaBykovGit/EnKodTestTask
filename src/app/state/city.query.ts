@@ -9,8 +9,8 @@ import { ICity } from '../models/city';
 })
 export class CityQuery extends QueryEntity<CityState> {
 
-  citys: ICity[] = this.getAll();
-  selectCitys$ = this.selectAll();
+  cities: ICity[] = this.getAll();
+  selectCities$ = this.selectAll();
 
   constructor(protected store: CityStore) {
     super(store);

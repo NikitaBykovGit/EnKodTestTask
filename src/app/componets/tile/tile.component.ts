@@ -13,7 +13,7 @@ import { ICity } from '../../models/city';
 })
 
 export class TileComponent {
-  citys$: Observable<ICity[]>;
+  cities$: Observable<ICity[]>;
 
   @Output() titleEvent = new EventEmitter<string>();
 
@@ -25,7 +25,7 @@ export class TileComponent {
 
   ngOnInit() {
     this.titleEvent.emit('Список городов');
-    this.citys$ = this.cityQuery.selectCitys$;
+    this.cities$ = this.cityQuery.selectCities$;
   }
 
   addToFavorite(id: number) {
