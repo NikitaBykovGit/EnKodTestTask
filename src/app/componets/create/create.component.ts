@@ -1,7 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { CityService } from "../../state/city.service"
 import { ICity } from "../../models/city"
@@ -14,24 +12,26 @@ import { NaviService } from "../../state/navi.service"
 })
 
 export class CreateComponent {
-
   @Output() titleEvent = new EventEmitter<string>();
 
+  id: number | null = null;
+
   constructor (
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer,
     private cityService: CityService,
     private naviService: NaviService,
-    private router: Router
-  ) {
-    this.matIconRegistry.addSvgIcon(
-      'Back',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/svg/undo.svg')
-    )
-  }
+    private router: Router,
+    private activateRoute: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.titleEvent.emit('Создать город');
+    this.activateRoute.paramMap.subscribe(params => {
+      this.id = Number(params.get('id'));
+    });
+    if (this.id === 0) {
+      this.titleEvent.emit('Создать город');
+    } else {
+      this.titleEvent.emit('Редактировать город');
+    }
   }
 
   getListDisplay() {

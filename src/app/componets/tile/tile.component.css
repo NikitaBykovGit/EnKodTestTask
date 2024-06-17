@@ -28,11 +28,11 @@ article {
   width: 100%;
 }
 
-.article__right {
+.article__right-title {
   display: flex;
 }
 
-.article__title {
+.article__left-title {
   display: flex;
   width: 80%;
 }

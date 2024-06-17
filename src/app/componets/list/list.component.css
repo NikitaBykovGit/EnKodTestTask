@@ -18,7 +18,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 28px;
+  padding: 0 0 0 28px;
   height: 60px;
   width: 100%;
 }
@@ -30,13 +30,19 @@ hr {
   width: 100%;
 }
 
-.article__title {
+.article__left-title {
   display: flex;
   align-items: center;
 }
 
+.article__right-title {
+  display: flex;
+  width: 110px;
+  justify-content: space-between;
+}
+
 .article__control button {
-  margin: 0px 20px;
+  margin: 0px 0px 0px 20px;
   border: 0;
   background: #fff;
 }

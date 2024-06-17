@@ -20,15 +20,19 @@ const appRoutes: Routes = [
   },
   {
     path: 'list',
-    component:ListComponent
+    component: ListComponent
   },
   {
     path: 'tile',
-    component:TileComponent
+    component: TileComponent
   },
   {
     path: 'create',
-    component:CreateComponent
+    component: CreateComponent
+  },
+  {
+    path: 'edit/:id',
+    component: CreateComponent
   }
 ]
 

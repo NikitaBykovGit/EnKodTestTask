@@ -14,13 +14,13 @@ export class CityService {
     private http: HttpClient
   ) {}
 
-  changeFavorite(id:number, val:boolean) {
+  changeFavorite(id: number, val: boolean) {
     this.http.patch(`/api/cities/${id}`, {favorite: val}).subscribe({next:(data:any) => {
       this.cityStore.update(id, {favorite: val})
     }});
   }
 
-  addCity(name:string, description:string, url:string) {
+  addCity(name: string, description: string, url: string) {
     let newCity = {
       image: url,
       name: name,
@@ -30,6 +30,16 @@ export class CityService {
     this.http.post("/api/cities", newCity).subscribe({next:(data:any) => {
       this.cityStore.add(data)
     }});
+  }
+
+  deleteCity(id: number) {
+    this.http.delete(`/api/cities/${id}`).subscribe({next:(data:any) => {
+      this.cityStore.remove(id)
+    }});
+  }
+
+  editCity(id: number) {
+    console.log(id)
   }
 
   fetchCitys() {

@@ -4,7 +4,7 @@
     <img class="article__img" src = "{{city.image}}" alt = "{{city.name}}">
     <div class="artcile__text">
       <div class="article__control">
-        <div class="article__title">
+        <div class="article__left-title">
           <h3>{{city.name}}</h3>
           <div *ngIf="city.favorite; else notSelected">
             <button (click)="delFromFavorite(city.id)">
@@ -17,11 +17,11 @@
             </button>
           </ng-template>
         </div>
-        <div class="article__right">
-          <button>
+        <div class="article__right-title">
+          <button (click)="deleteCity(city.id)">
             <mat-icon class="article__icon" svgIcon="Delete"></mat-icon>
           </button>
-          <button>
+          <button (click)="navigateToEditForm(city.id)">
             <mat-icon class="article__icon" svgIcon="Edit"></mat-icon>
           </button>
         </div>
