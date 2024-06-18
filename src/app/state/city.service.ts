@@ -39,8 +39,11 @@ export class CityService {
     }});
   }
 
-  editCity(id: number) {
-    console.log(id)
+  editCity(id: number, name: string, description: string, url: string) {
+    let data = {name: name, description: description, url: url};
+    this.http.patch(`/api/cities/${id}`, data).subscribe({next:(data:any) => {
+      this.cityStore.update(id, data)
+    }});
   }
 
   fetchCity(id: number): Observable<ICity> {
